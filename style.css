@@ -458,52 +458,132 @@ span {
 .footer-iconTop a:hover {
     background-color: var(--hover-color); 
 }
-
-
-/* breakpoints */
-@media (max-width:1200px) {
-    html {
-        font-size: 55%;
+/* Mobile devices (up to 600px) */
+@media (max-width: 600px) {
+    .header {
+        padding: 1.5rem 5%;
     }
-}
 
-@media(max-width:991px){
-    .header{
-        padding: 2rem 3% 2rem;
+    .logo {
+        font-size: 2rem;
     }
-    section{
-        padding: 10rem 3% 2rem;
-    }
-    .footer{
-        padding: 2rem 3%;
-    }
-}
 
-@media(max-width:991px){
-    #menu-icon{
+    .navbar a {
+        font-size: 1.4rem;
+        margin-left: 2rem;
+    }
+
+    #menu-icon {
         display: block;
     }
-    
-.navbar{
-    position:absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    padding: 1rem 3%;
-    background: var(--bg-color);
-    border-top: .1rem solid rgba(0, 0, 0, .2);
-    box-shadow: 0 .5rem 1rem rgba(0,0,0, .2);
-    
+
+    .home-image img {
+        max-width: 80%;
+        margin: 0;
+    }
+
+    .home-content h1 {
+        font-size: 4.5rem;
+    }
+
+    .home-content p {
+        font-size: 1.8rem;
+    }
+
+    .about-content h2,
+    .about-content h3,
+    .about-content p {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .portfolio-container {
+        grid-template-columns: 1fr;
+    }
+
+    .contact form .input-box input {
+        width: 100%;
+    }
 }
 
+/* Tablets (up to 768px) */
+@media (max-width: 768px) {
+    .header {
+        padding: 2rem 6%;
+    }
 
-.navbar.active{
-    display: block;
+    .navbar a {
+        font-size: 1.6rem;
+    }
+
+    .home-content h1 {
+        font-size: 4.8rem;
+    }
+
+    .about-content h2,
+    .about-content h3,
+    .about-content p {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .services-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .portfolio-container {
+        grid-template-columns: 1fr;
+    }
+
+    .contact form .input-box input,
+    .contact form textarea {
+        width: 100%;
+    }
 }
-.navbar a{
-    display: block;
-    font-size: 2rem;
-    margin: 3rem 0;
+
+/* Laptops (up to 1024px) */
+@media (max-width: 1024px) {
+    .header {
+        padding: 2rem 8%;
+    }
+
+    .navbar a {
+        font-size: 1.6rem;
+        margin-left: 3rem;
+    }
+
+    .home-content h1 {
+        font-size: 5.2rem;
+    }
+
+    .home-content p {
+        font-size: 1.9rem;
+    }
+
+    .services-container {
+        flex-wrap: wrap;
+        gap: 1.5rem;
+    }
+
+    .portfolio-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .contact form .input-box input {
+        width: 48%;
+    }
 }
+
+/* Larger screens (1025px and above) */
+@media (min-width: 1025px) {
+    .header {
+        padding: 2rem 9%;
+    }
+
+    .navbar a {
+        font-size: 1.7rem;
+        margin-left: 4rem;
+    }
 }
 
